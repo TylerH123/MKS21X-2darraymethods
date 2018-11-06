@@ -110,25 +110,20 @@ public class driver{
       System.out.println("Should print 1: " + ArrayMethods.columnSum(b,2));
       //^^^Here one of the rows is shorter than others
       System.out.println("Should print 5: " + ArrayMethods.columnSum(a,0));
-      System.out.println("\nIndex too big --> Should print printStackTrace: ");
+      System.out.println("\nIndex too big --> Should print error");
       System.out.println(ArrayMethods.columnSum(a, 3)); //Error Testing
     }
     catch (IndexOutOfBoundsException e){
-      e.printStackTrace();
+      System.out.println("Fix index");
     }
     //Error Testing
     try{
-      System.out.println("\nNegative Index --> Should print printStackTrace: ");
+      System.out.println("\nNegative Index --> Should print error");
       System.out.println(ArrayMethods.columnSum(a, -1)); //Error Testing
-    }
-    catch (IllegalArgumentException e){
-      e.printStackTrace();
-    }
-    try{
       System.out.println("Empty Array: should print 0: "+ ArrayMethods.columnSum(empty,0));
     }
-    catch (ArrayIndexOutOfBoundsException e){
-      e.printStackTrace();
+    catch (IndexOutOfBoundsException e){
+      System.out.println("Fix index");
     }
 
     //--------------------------------------------------------------------//
@@ -158,7 +153,7 @@ public class driver{
     }
     catch (IndexOutOfBoundsException e){
       //This should never happen!
-      e.printStackTrace();
+      System.out.println("Fix index");
     }
     //--------------------------------------------------------------------//
     System.out.println("\n\n--------Phase 3 Testing--------");
@@ -173,7 +168,7 @@ public class driver{
     }
     catch (IndexOutOfBoundsException e){
       //This should never happen!
-      e.printStackTrace();
+      System.out.println("Fix index");
     }
     //--------------------------------------------------------------------//
     try{
@@ -187,7 +182,7 @@ public class driver{
     }
     catch (IndexOutOfBoundsException e){
       //This should never happen!
-      e.printStackTrace();
+      System.out.println("Fix index");
     }
   }
 }
