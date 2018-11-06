@@ -30,7 +30,7 @@ public class ArrayMethods{
     int[] arr = new int[len];
     for (int i = 0; i < ary.length; i++){
       for (int j = 0; j < ary[i].length; j++){
-        arr[i] += ary[i][i];
+        arr[j] += ary[i][j];
       }
     }
     return arr;
