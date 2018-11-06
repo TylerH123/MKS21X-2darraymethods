@@ -87,25 +87,20 @@ public class driver{
       System.out.println("Should print 34: " + ArrayMethods.rowSum(c, 0));
       System.out.println("Should print 6: " + ArrayMethods.rowSum(a, 1));
       System.out.println("Should print 4: " + ArrayMethods.rowSum(b, 0));
-      System.out.println("\nIndex too big --> Should print printStackTrace: ");
+      System.out.println("\nIndex too big --> Should print error");
       System.out.println(ArrayMethods.rowSum(b,3)); //Error Testing
     }
     catch (IndexOutOfBoundsException e){
-      e.printStackTrace();
+      System.out.println("Fix Index");
     }
     //Error Testing
     try{
-      System.out.println("\nNegative Index --> Should print printStackTrace: ");
+      System.out.println("\nNegative Index --> Should print error");
       System.out.println(ArrayMethods.rowSum(b, -1)); //Error Testing
-    }
-    catch (IllegalArgumentException e){
-      e.printStackTrace();
-    }
-    try{
       System.out.println("Empty Array: should print 0: "+ ArrayMethods.columnSum(empty,0));
     }
     catch (IndexOutOfBoundsException e){
-      e.printStackTrace();
+      System.out.println("Fix index");
     }
     //--------------------------------------------------------------------//
     try{
