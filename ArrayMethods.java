@@ -1,6 +1,7 @@
 public class ArrayMethods{
   public static int rowSum(int[][] ary, int x){
     int sum = 0;
+    if (x >= ary.length || x < 0)  throw new ArrayIndexOutOfBoundsException();
     for (int i = 0; i < ary[x].length; i++){
       sum += ary[x][i];
     }
@@ -9,6 +10,7 @@ public class ArrayMethods{
   public static int columnSum(int[][] ary, int y){
     int sum = 0;
     for (int i = 0; i < ary.length; i++){
+      if (y >= ary[i].length || y < 0) throw new ArrayIndexOutOfBoundsException();
       sum += ary[i][y];
     }
     return sum;

@@ -132,7 +132,7 @@ public class driver{
     try{
       System.out.println("Empty Array: should print 0: "+ ArrayMethods.columnSum(empty,0));
     }
-    catch (IndexOutOfBoundsException e){
+    catch (ArrayIndexOutOfBoundsException e){
       e.printStackTrace();
     }
 
