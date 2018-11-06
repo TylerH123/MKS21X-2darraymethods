@@ -24,7 +24,7 @@ public class ArrayMethods{
   }
   public static int[] allColSums(int[][] ary){
     int len = ary[0].length;
-    for (int i = 0; i < ary[i].length; i++){
+    for (int i = 0; i < ary.length; i++){
       if (ary[i].length > len){
         len = ary[i].length;
       }
