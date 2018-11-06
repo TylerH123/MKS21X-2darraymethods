@@ -39,7 +39,16 @@ public class ArrayMethods{
     int[] arr = allRowSums(ary);
     for (int i = 0; i < arr.length-1; i++){
       if (arr[i] != arr[i+1]){
-        return false; 
+        return false;
+      }
+    }
+    return true;
+  }
+  public static boolean isColumnMagic(int[][] ary){
+    int[] arr = allColSums(ary);
+    for (int i = 0; i < arr.length-1; i++){
+      if (arr[i] != arr[i+1]){
+        return false;
       }
     }
     return true;
