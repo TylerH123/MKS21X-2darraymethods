@@ -150,6 +150,8 @@ public class driver{
       System.out.println("Should print [18, 15, 12, 33]: " + printArray(ArrayMethods.allColSums(c)));
       System.out.println("Should print [15, 9, 1]: " + printArray(ArrayMethods.allColSums(b)));
       System.out.println("Should print [5, 11, 8]: " + printArray(ArrayMethods.allColSums(a)));
+      System.out.println("Empty Array: should print [0]: " + printArray(ArrayMethods.allColSums(empty)));
+
     }
     catch (IndexOutOfBoundsException e){
       //This should never happen!

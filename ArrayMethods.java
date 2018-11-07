@@ -8,12 +8,29 @@ public class ArrayMethods{
     return sum;
   }
   public static int columnSum(int[][] ary, int y){
-    int sum = 0;
+    boolean isEmpty = true;
     for (int i = 0; i < ary.length; i++){
-      if (y >= ary[i].length-1 || y < 0) throw new IndexOutOfBoundsException();
-      sum += ary[i][y];
+      if (ary[i].length > 0){
+        isEmpty = false;
+      }
     }
-    return sum;
+    if (isEmpty == true){
+      return 0;
+    }
+    int len = ary[0].length;
+    for (int i = 0; i < ary.length; i++){
+      if (ary[i].length > len){
+      len = ary[i].length;
+      }
+    }
+    if (y >= len || y < 0) throw new IndexOutOfBoundsException();
+    int[] arr = new int[len];
+    for (int i = 0; i < ary.length; i++){
+      for (int j = 0; j < ary[i].length; j++){
+        arr[j] += ary[i][j];
+      }
+    }
+    return arr[y];
   }
   public static int[] allRowSums(int[][] ary){
     int[] arr = new int[ary.length];
@@ -23,6 +40,17 @@ public class ArrayMethods{
     return arr;
   }
   public static int[] allColSums(int[][] ary){
+    boolean isEmpty = true;
+    for (int i = 0; i < ary.length; i++){
+      if (ary[i].length > 0){
+        isEmpty = false;
+      }
+    }
+    if (isEmpty == true){
+      int[] arry = new int[1];
+      arry[0] = 0;
+      return arry;
+    }
     int len = ary[0].length;
     for (int i = 0; i < ary.length; i++){
       if (ary[i].length > len){
